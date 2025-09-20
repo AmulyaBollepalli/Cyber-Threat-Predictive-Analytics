@@ -1,0 +1,255 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+
+{% load static%}
+
+<!doctype html>
+<html lang="zxx">
+
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Cyber Threat Predictive Analytics</title>
+
+<!-- Template CSS -->
+<link rel="stylesheet"
+	href="{% static '../static/assets/css/style-starter.css'%}">
+<!-- Template CSS -->
+
+    <style>
+        #customers {
+          font-family: Arial, Helvetica, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+
+        #customers td, #customers th {
+          border: 1px solid #ddd;
+          padding: 8px;
+        }
+
+        #customers tr:nth-child(even){background-color: #f2f2f2;}
+
+        #customers tr:hover {background-color: #ddd;}
+
+        #customers th {
+          padding-top: 12px;
+          padding-bottom: 12px;
+          text-align: left;
+          background-color: #04AA6D;
+          color: white;
+        }
+        </style>
+</head>
+
+<body>
+	<!--header-->
+	<header id="site-header" class="fixed-top">
+		<div class="container">
+			<nav class="navbar navbar-expand-lg stroke">
+				<h1>
+					<a class="navbar-brand mr-lg-5" href="/">CTPA</a>
+				</h1>
+
+				<button class="navbar-toggler  collapsed bg-gradient" type="button"
+					data-toggle="collapse" data-target="#navbarTogglerDemo02"
+					aria-controls="navbarTogglerDemo02" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon fa icon-expand fa-bars"></span> <span
+						class="navbar-toggler-icon fa icon-close fa-times"></span> </span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item"><a class="nav-link" href="/aboutmodel">About
+								Model</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/analysis">Analysis</a></li>
+					</ul>
+				</div>
+				<div class="d-lg-block d-none">
+					<a href="/registration" class="btn btn-style btn-secondary">Registration</a>
+					<a href="/login" class="btn btn-style btn-secondary">Login</a>
+				</div>
+				<!-- toggle switch for light and dark theme -->
+				<div class="mobile-position">
+					<nav class="navigation">
+						<div class="theme-switch-wrapper">
+							<label class="theme-switch" for="checkbox"> <input
+								type="checkbox" id="checkbox">
+								<div class="mode-container">
+									<i class="gg-sun"></i> <i class="gg-moon"></i>
+								</div>
+							</label>
+						</div>
+					</nav>
+				</div>
+				<!-- //toggle switch for light and dark theme -->
+			</nav>
+		</div>
+	</header>
+	<!-- //header -->
+	<!--banner-slider-->
+	<!-- main-slider -->
+	<br />
+	<br />
+	<br />
+	<br />
+
+	<!-- /content-6-->
+	<section class="w3l-content-6 py-5">
+		<div class="container py-lg-5">
+			<div class="row">
+				<div class="col-lg-12 content-6-right mt-lg-0 mt-4">
+                    <table id="customers">
+                      <tr>
+                        <th>Algorithm</th>
+                        <th>Accuracy</th>
+                      </tr>
+                      <tr>
+                        <td>Decission Tree</td>
+                        <td>0.9988106661621008</td>
+                      </tr>
+                      <tr>
+                        <td>LogisticRegression</td>
+                        <td>0.907988809449798</td>
+                      </tr>
+                      <tr>
+                        <td>Random Forest</td>
+                        <td> 0.9992836966658107</td>
+                      </tr>
+                      <tr>
+                        <td>XGBoost</td>
+                        <td>0.9992972118230595</td>
+                      </tr>
+                      
+                        
+                      
+                    </table>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<!-- footer -->
+		<section class="w3l-footer">
+			<!-- move top -->
+			<button onclick="topFunction()" id="movetop" title="Go to top">
+				<span class="fa fa-angle-up"></span>
+			</button>
+			<script>
+				// When the user scrolls down 20px from the top of the document, show the button
+				window.onscroll = function() {
+					scrollFunction()
+				};
+
+				function scrollFunction() {
+					if (document.body.scrollTop > 20
+							|| document.documentElement.scrollTop > 20) {
+						document.getElementById("movetop").style.display = "block";
+					} else {
+						document.getElementById("movetop").style.display = "none";
+					}
+				}
+
+				// When the user clicks on the button, scroll to the top of the document
+				function topFunction() {
+					document.body.scrollTop = 0;
+					document.documentElement.scrollTop = 0;
+				}
+			</script>
+			<!-- //move top -->
+			<script>
+				$(function() {
+					$('.navbar-toggler').click(function() {
+						$('body').toggleClass('noscroll');
+					})
+				});
+			</script>
+		</section>
+		<!-- //footer -->
+	</footer>
+	<!-- Template JavaScript -->
+	<script src="{% static '../static/assets/js/jquery-3.3.1.min.js'%}"></script>
+	<script src="{% static '../static/assets/js/theme-change.js'%}"></script>
+	<!--/slider-js-->
+	<script src="{% static '../static/assets/js/jquery.min.js'%}"></script>
+	<script src="{% static '../static/assets/js/modernizr-2.6.2.min.js'%}"></script>
+	<script
+		src="{% static '../static/assets/js/jquery.zoomslider.min.js'%}"></script>
+	<!--//slider-js-->
+	<script src="{% static '../static/assets/js/owl.carousel.js'%}"></script>
+	<!-- script for tesimonials carousel slider -->
+	<script>
+		$(document).ready(function() {
+			$("#owl-demo1").owlCarousel({
+				loop : true,
+				margin : 20,
+				nav : false,
+				responsiveClass : true,
+				responsive : {
+					0 : {
+						items : 1,
+						nav : false
+					},
+					736 : {
+						items : 1,
+						nav : false
+					},
+					1000 : {
+						items : 1,
+						nav : false,
+						loop : true
+					}
+				}
+			})
+		})
+	</script>
+	<!-- //script for tesimonials carousel slider -->
+	<!-- stats number counter-->
+	<script src="{% static '../static/assets/js/jquery.waypoints.min.js'%}"></script>
+	<script src="{% static '../static/assets/js/jquery.countup.js'%}"></script>
+	<script>
+		$('.counter').countUp();
+	</script>
+	<!-- //stats number counter -->
+
+	<!--/MENU-JS-->
+	<script>
+		$(window).on("scroll", function() {
+			var scroll = $(window).scrollTop();
+
+			if (scroll >= 80) {
+				$("#site-header").addClass("nav-fixed");
+			} else {
+				$("#site-header").removeClass("nav-fixed");
+			}
+		});
+
+		//Main navigation Active Class Add Remove
+		$(".navbar-toggler").on("click", function() {
+			$("header").toggleClass("active");
+		});
+		$(document).on("ready", function() {
+			if ($(window).width() > 991) {
+				$("header").removeClass("active");
+			}
+			$(window).on("resize", function() {
+				if ($(window).width() > 991) {
+					$("header").removeClass("active");
+				}
+			});
+		});
+	</script>
+	<!--//MENU-JS-->
+
+	<script src="{% static '../static/assets/js/bootstrap.min.js'%}"></script>
+
+</body>
+
+</html>

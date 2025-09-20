@@ -1,0 +1,310 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+
+{% load static%}
+
+<!doctype html>
+<html lang="zxx">
+
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Cyber Threat Predictive Analytics</title>
+
+<!-- Template CSS -->
+<link rel="stylesheet"
+	href="{% static '../static/assets/css/style-starter.css'%}">
+<!-- Template CSS -->
+</head>
+
+<body>
+	<!--header-->
+	<header id="site-header" class="fixed-top">
+		<div class="container">
+			<nav class="navbar navbar-expand-lg stroke">
+				<h1>
+					<a class="navbar-brand mr-lg-5" href="/">CTPA</a>
+				</h1>
+
+				<button class="navbar-toggler  collapsed bg-gradient" type="button"
+					data-toggle="collapse" data-target="#navbarTogglerDemo02"
+					aria-controls="navbarTogglerDemo02" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon fa icon-expand fa-bars"></span> <span
+						class="navbar-toggler-icon fa icon-close fa-times"></span> </span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item"><a class="nav-link" href="/aboutmodel">About Model</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/analysis">Analysis</a></li>
+                    </ul>
+                </div>
+				<div class="d-lg-block d-none">
+					<a href="/registration" class="btn btn-style btn-secondary">Registration</a>
+					<a href="/login" class="btn btn-style btn-secondary">Login</a>
+				</div>
+				<!-- toggle switch for light and dark theme -->
+				<div class="mobile-position">
+					<nav class="navigation">
+						<div class="theme-switch-wrapper">
+							<label class="theme-switch" for="checkbox"> <input
+								type="checkbox" id="checkbox">
+								<div class="mode-container">
+									<i class="gg-sun"></i> <i class="gg-moon"></i>
+								</div>
+							</label>
+						</div>
+					</nav>
+				</div>
+				<!-- //toggle switch for light and dark theme -->
+			</nav>
+		</div>
+	</header>
+	<!-- //header -->
+	<!--banner-slider-->
+	<!-- main-slider -->
+	<br />
+	<br />
+	<br />
+	<br />
+
+	<!-- /content-6-->
+	<section class="w3l-content-6 py-5">
+		<div class="container py-lg-5">
+			<div class="row">
+				<div class="col-lg-12 content-6-right mt-lg-0 mt-4">
+					<h2>What is Cyber Threat Predictive Analytics?</h2>
+					<br>
+					<p> Predictive analytics involves using data analysis techniques,
+						 statistical models, and machine learning algorithms to 
+						anticipate potential cyber threats before they occur.</p>
+					<br> <br>
+
+					<h2>Understanding the Datase</h2>
+					<br>
+					<p>The KDD Cup dataset consists of a large number of network
+						traffic records, each labeled as normal or one of several attack
+						types.</p>
+					<br>
+					<p>It contains both raw network packet data and preprocessed
+						feature vectors derived from the packet data.</p>
+					<br>
+					<p>The dataset includes various types of attacks such as denial
+						of service (DoS), user-to-root (U2R), remote-to-local (R2L), and
+						probing.</p>
+					<br> <br>
+
+					<h2>Data Preprocessing</h2>
+					<br>
+					<p>Before building a model, the dataset needs preprocessing.
+						This involves tasks like handling missing values, encoding
+						categorical variables, and scaling numerical features.</p>
+					<br>
+					<p>In the case of the KDD Cup dataset, feature scaling and
+						normalization are usually performed because the features have
+						different scales.</p>
+					<br> <br>
+
+					<h2>Feature Selection</h2>
+					<br>
+					<p>Feature selection is crucial for building an effective
+						intrusion detection model. It involves selecting the most relevant
+						features while discarding irrelevant or redundant ones.</p>
+					<br>
+					<p>Techniques such as correlation analysis, feature importance
+						ranking, and domain knowledge can be used for feature selection.</p>
+					<br> <br>
+
+					<h2>Model Selection</h2>
+					<br>
+					<p>Various machine learning algorithms can be used for
+						intrusion detection, including Decision Trees, Random Forests,
+						Support Vector Machines (SVM), Neural Networks, and ensemble
+						methods.</p>
+					<br>
+					<p>Model selection involves experimenting with different
+						algorithms and selecting the one that performs best on the
+						dataset.</p>
+					<br> <br>
+
+					<h2>Model Training</h2>
+					<br>
+					<p>Once the model is selected, it needs to be trained on the
+						preprocessed dataset. During training, the model learns to
+						distinguish between normal network traffic and various types of
+						attacks.</p>
+					<br>
+					<p>Training involves feeding the labeled data to the model and
+						adjusting its parameters to minimize the prediction error.</p>
+					<br> <br>
+
+
+					<h2>Model Evaluation</h2>
+					<br>
+					<p>After training, the model needs to be evaluated to assess
+						its performance. Evaluation metrics such as accuracy, precision,
+						recall, F1-score, and area under the ROC curve (AUC-ROC) are
+						commonly used.</p>
+					<br>
+					<p>The model should be evaluated on both training and testing
+						datasets to ensure that it generalizes well to unseen data.</p>
+					<br> <br>
+
+					<h2>Hyperparameter Tuning</h2>
+					<br>
+					<p>Hyperparameters are parameters that are not learned during
+						training but affect the behavior of the model.</p>
+					<br>
+					<p>Techniques such as grid search or random search can be used
+						to find the optimal values for hyperparameters, thereby improving
+						the model's performance.</p>
+					<br> <br>
+
+					<h2>Deployment</h2>
+					<br>
+					<p>Once the model is trained and evaluated satisfactorily, it
+						can be deployed in a real-world environment for continuous
+						monitoring of network traffic.</p>
+					<br>
+					<p>Deployment involves integrating the model into existing
+						network infrastructure and setting up mechanisms to trigger alerts
+						when suspicious activity is detected.</p>
+					<br> <br>
+
+					<h2>Continuous Monitoring and Updating</h2>
+					<br>
+					<p>Network intrusion detection is an ongoing process, and the
+						model needs to be continuously monitored and updated to adapt to
+						evolving threats.</p>
+					<br>
+					<p>New attack types may emerge, and existing attack patterns
+						may change over time, necessitating periodic retraining of the
+						model.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<!-- footer -->
+		<section class="w3l-footer">
+			<!-- move top -->
+			<button onclick="topFunction()" id="movetop" title="Go to top">
+				<span class="fa fa-angle-up"></span>
+			</button>
+			<script>
+				// When the user scrolls down 20px from the top of the document, show the button
+				window.onscroll = function() {
+					scrollFunction()
+				};
+
+				function scrollFunction() {
+					if (document.body.scrollTop > 20
+							|| document.documentElement.scrollTop > 20) {
+						document.getElementById("movetop").style.display = "block";
+					} else {
+						document.getElementById("movetop").style.display = "none";
+					}
+				}
+
+				// When the user clicks on the button, scroll to the top of the document
+				function topFunction() {
+					document.body.scrollTop = 0;
+					document.documentElement.scrollTop = 0;
+				}
+			</script>
+			<!-- //move top -->
+			<script>
+				$(function() {
+					$('.navbar-toggler').click(function() {
+						$('body').toggleClass('noscroll');
+					})
+				});
+			</script>
+		</section>
+		<!-- //footer -->
+	</footer>
+	<!-- Template JavaScript -->
+	<script src="{% static '../static/assets/js/jquery-3.3.1.min.js'%}"></script>
+	<script src="{% static '../static/assets/js/theme-change.js'%}"></script>
+	<!--/slider-js-->
+	<script src="{% static '../static/assets/js/jquery.min.js'%}"></script>
+	<script src="{% static '../static/assets/js/modernizr-2.6.2.min.js'%}"></script>
+	<script
+		src="{% static '../static/assets/js/jquery.zoomslider.min.js'%}"></script>
+	<!--//slider-js-->
+	<script src="{% static '../static/assets/js/owl.carousel.js'%}"></script>
+	<!-- script for tesimonials carousel slider -->
+	<script>
+		$(document).ready(function() {
+			$("#owl-demo1").owlCarousel({
+				loop : true,
+				margin : 20,
+				nav : false,
+				responsiveClass : true,
+				responsive : {
+					0 : {
+						items : 1,
+						nav : false
+					},
+					736 : {
+						items : 1,
+						nav : false
+					},
+					1000 : {
+						items : 1,
+						nav : false,
+						loop : true
+					}
+				}
+			})
+		})
+	</script>
+	<!-- //script for tesimonials carousel slider -->
+	<!-- stats number counter-->
+	<script src="{% static '../static/assets/js/jquery.waypoints.min.js'%}"></script>
+	<script src="{% static '../static/assets/js/jquery.countup.js'%}"></script>
+	<script>
+		$('.counter').countUp();
+	</script>
+	<!-- //stats number counter -->
+
+	<!--/MENU-JS-->
+	<script>
+		$(window).on("scroll", function() {
+			var scroll = $(window).scrollTop();
+
+			if (scroll >= 80) {
+				$("#site-header").addClass("nav-fixed");
+			} else {
+				$("#site-header").removeClass("nav-fixed");
+			}
+		});
+
+		//Main navigation Active Class Add Remove
+		$(".navbar-toggler").on("click", function() {
+			$("header").toggleClass("active");
+		});
+		$(document).on("ready", function() {
+			if ($(window).width() > 991) {
+				$("header").removeClass("active");
+			}
+			$(window).on("resize", function() {
+				if ($(window).width() > 991) {
+					$("header").removeClass("active");
+				}
+			});
+		});
+	</script>
+	<!--//MENU-JS-->
+
+	<script src="{% static '../static/assets/js/bootstrap.min.js'%}"></script>
+
+</body>
+
+</html>

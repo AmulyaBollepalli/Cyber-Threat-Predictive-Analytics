@@ -1,0 +1,256 @@
+{% load  static%}
+
+<!doctype html>
+<html lang="zxx">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Cyber Threat Predictive Analytics</title>
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="{% static '../static/assets/css/style-starter.css'%}">
+  <!-- Template CSS -->
+</head>
+
+<body>
+  <!--header-->
+      <header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg stroke">
+                <h1>
+                    <a class="navbar-brand mr-lg-5" href="/predict"> Cyber Threat Predictive Analytics</a>
+                </h1>
+
+                <button class="navbar-toggler  collapsed bg-gradient" type="button"
+                    data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                    aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span> <span
+                        class="navbar-toggler-icon fa icon-close fa-times"></span> </span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                </div>
+                <div class="d-lg-block d-none">
+                    <a href="/logout" class="btn btn-style btn-secondary">Logout</a>
+                </div>
+                <!-- toggle switch for light and dark theme -->
+                <div class="mobile-position">
+                    <nav class="navigation">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="checkbox"> <input
+                                type="checkbox" id="checkbox">
+                                <div class="mode-container">
+                                    <i class="gg-sun"></i> <i class="gg-moon"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+                <!-- //toggle switch for light and dark theme -->
+            </nav>
+        </div>
+    </header>
+  <!-- //header -->
+  <!--banner-slider-->
+  <!-- main-slider -->
+  <br/><br/><br/><br/>
+	<section class="w3l-contact" id="contact">
+		<div class="contact-infubd py-5">
+			<div class="container py-lg-3">
+				<div class="contact-grids row">
+					<div class="col-lg-6 mt-lg-0 mt-5 contact-right">
+
+                        {% if message%}
+                            <script type="text/javascript">alert("{{message}}");</script>
+                        {% endif %}
+
+                        <center><font color="red" size="10">{{ message }}</font></center><br/>
+						<form action="/predictaction" class="signin-form">
+                            {% csrf_token %}
+							<div class="input-grids">
+                                <div class="form-group">
+									<input type="text" name="protocol_type" id="w3lName"
+										placeholder="protocol_type*" class="contact-input" style="width: 1000px;"
+										required="required" />
+								</div>
+                                <div class="form-group">
+									<input type="text" name="flag" id="w3lName"
+										placeholder="Status of the connection –Normal or Error*" class="contact-input"
+										required="required" style="width: 1000px;"/>
+								</div>
+
+                                <div class="form-group">
+									<input type="text" name="src_bytes" id="w3lName"
+										placeholder="src_bytes*" class="contact-input"
+										required="required" style="width: 1000px;"/>
+								</div>
+                                <div class="form-group">
+									<input type="text" name="dst_bytes" id="w3lName"
+										placeholder="dst_bytes*" class="contact-input"
+										required="required" style="width: 1000px;"/>
+								</div>
+								<div class="form-group">
+									<input type="text" name="count" id="w3lName"
+										placeholder="Number of connections to the same destination host as the current connection in the past two seconds*" class="contact-input" style="width: 1000px;"
+										required="required" />
+								</div>
+                                <div class="form-group">
+									<input type="text" name="same_srv_rate" id="w3lSender"
+										placeholder="The percentage of connections that were to the same service, among the connections aggregated in count*"
+										class="contact-input" required="required" style="width: 1000px;"/>
+								</div>
+                                <div class="form-group">
+									<input type="text" name="diff_srv_rate" id="w3lSender"
+										placeholder="diff_srv_rate*"
+										class="contact-input" required="required" style="width: 1000px;"/>
+								</div>
+                                <div class="form-group">
+									<input type="text" name="dst_host_same_srv_rate" id="w3lSender"
+										placeholder="The percentage of connections that were to the same service, among the connections aggregated in dst_host_count*"
+										class="contact-input" required="required" style="width: 1000px;"/>
+								</div>
+                                <div class="form-group">
+									<input type="text" name="dst_host_same_src_port_rate" id="w3lName"
+										placeholder="The percentage of connections that were to the same source port, among the connections aggregated in dst_host_srv_count*" class="contact-input"
+										required="required" style="width: 1000px;"/>
+								</div>
+                                <div class="form-group">
+									<input type="text" name="last_flag" id="w3lName"
+										placeholder="Last Flag*" class="contact-input"
+										required="required" style="width: 1000px;"/>
+								</div>
+							</div>
+							<div class="text-right">
+								<button class="btn btn-style btn-primary">Predict</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- /contact-form -->
+  <!-- /main-slider -->
+  <!-- //banner-slider-->
+
+  <!--/w3l-footer-29-main-->
+  <footer>
+    <!-- footer -->
+    <section class="w3l-footer">
+	    <!-- move top -->
+        <button onclick="topFunction()" id="movetop" title="Go to top">
+            <span class="fa fa-angle-up"></span>
+        </button>
+        <script>
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {
+                scrollFunction()
+            };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20
+                        || document.documentElement.scrollTop > 20) {
+                    document.getElementById("movetop").style.display = "block";
+                } else {
+                    document.getElementById("movetop").style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
+        <!-- //move top -->
+        <script>
+            $(function() {
+                $('.navbar-toggler').click(function() {
+                    $('body').toggleClass('noscroll');
+                })
+            });
+        </script>
+    </section>
+    <!-- //footer -->
+  </footer>
+  <!-- Template JavaScript -->
+  <script src="{% static '../static/assets/js/jquery-3.3.1.min.js'%}"></script>
+  <script src="{% static '../static/assets/js/theme-change.js'%}"></script>
+  <!--/slider-js-->
+  <script src="{% static '../static/assets/js/jquery.min.js'%}"></script>
+  <script src="{% static '../static/assets/js/modernizr-2.6.2.min.js'%}"></script>
+  <script src="{% static '../static/assets/js/jquery.zoomslider.min.js'%}"></script>
+  <!--//slider-js-->
+  <script src="{% static '../static/assets/js/owl.carousel.js'%}"></script>
+  <!-- script for tesimonials carousel slider -->
+  <script>
+    $(document).ready(function () {
+      $("#owl-demo1").owlCarousel({
+        loop: true,
+        margin: 20,
+        nav: false,
+        responsiveClass: true,
+        responsive: {
+          0: {
+            items: 1,
+            nav: false
+          },
+          736: {
+            items: 1,
+            nav: false
+          },
+          1000: {
+            items: 1,
+            nav: false,
+            loop: true
+          }
+        }
+      })
+    })
+  </script>
+  <!-- //script for tesimonials carousel slider -->
+  <!-- stats number counter-->
+  <script src="{% static '../static/assets/js/jquery.waypoints.min.js'%}"></script>
+  <script src="{% static '../static/assets/js/jquery.countup.js'%}"></script>
+  <script>
+    $('.counter').countUp();
+  </script>
+  <!-- //stats number counter -->
+
+  <!--/MENU-JS-->
+  <script>
+    $(window).on("scroll", function () {
+      var scroll = $(window).scrollTop();
+
+      if (scroll >= 80) {
+        $("#site-header").addClass("nav-fixed");
+      } else {
+        $("#site-header").removeClass("nav-fixed");
+      }
+    });
+
+    //Main navigation Active Class Add Remove
+    $(".navbar-toggler").on("click", function () {
+      $("header").toggleClass("active");
+    });
+    $(document).on("ready", function () {
+      if ($(window).width() > 991) {
+        $("header").removeClass("active");
+      }
+      $(window).on("resize", function () {
+        if ($(window).width() > 991) {
+          $("header").removeClass("active");
+        }
+      });
+    });
+  </script>
+  <!--//MENU-JS-->
+
+  <script src="{% static '../static/assets/js/bootstrap.min.js'%}"></script>
+
+</body>
+
+</html>
